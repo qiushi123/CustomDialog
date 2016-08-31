@@ -1,7 +1,9 @@
 # CustomDialog & PromptDialog
 
-* 1，可以完全自定义弹窗，选择框
+* 1，可以完全自定义弹窗，选择框的样式和布局
+
 * 2，既可以显示单个按钮的选择框，又可以显示两个按钮的选择框
+
 * 3，可以自己定义是否显示提示信息，是否显示标题，是否显示图片 
 
 # 使用步骤:
@@ -15,11 +17,11 @@
     //自定义的弹窗（提示框）
     public void notification() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("提示框")//这里设置标题，不设置就不显示标题
+        builder.setTitle("提示框")                                   //这里设置标题，不设置就不显示标题
                 .setMessage("提示框可以自定义布局样式，只有一个按钮")//这里设置提示信息，不设置就不显示
-                .setTopImage(R.drawable.icon_tanchuang_tanhao)//这里设置顶部图标，不设置就不显示
+                .setTopImage(R.drawable.icon_tanchuang_tanhao)      //这里设置顶部图标，不设置就不显示
                 .setPositiveButton("朕知道了", new DialogInterface.OnClickListener() 
-                {//这里可以设置两个按钮，如果其中一个不设置，单个按钮会独占一行
+                {                                               //这里可以设置两个按钮，如果其中一个不设置，单个按钮会独占一行
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         mDialog.dismiss();
